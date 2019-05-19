@@ -3,43 +3,70 @@
 <head>
     <meta charset="utf-8" />
     <title>Contact Us!</title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <!--<link href="Content/bootstrap.min.css" rel="stylesheet" />-->
+    <!--<script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
+        body {
+            margin: auto;
+            text-align: center;
+        }
+
+        #main-container {
+            margin: auto;
+        }
+
+        #form-container {
+            background: linear-gradient(45deg, rgba(206, 245, 255, 0.60), rgba(255, 255, 206, 0.60));
+        }
     </style>
 </head>
 <body>
     <header></header>
-    <main class="main-container">
-        <div class="container">
-            <form>
+    <main class="d-flex justify-content-center" id="main-container">
+        <div class="container rounded border border-light p-4 m-4" id="form-container">
+            <form action="#" method="post">
                 <div class="form-group">
-                    <div class="input-group">
-                        <select class="form-control custom-select">
-                            <optgroup label="Reasons For Contacting">
-                                <option value="reservation">Reservation</option>
-                                <option value="lost baggage">Lost Baggage</option>
-                                <option value="billing">Billing</option>
-                                <option value="other">Other</option>
-                            </optgroup>
-                        </select>
+                    <select class="form-control custom-select" id="contact-reason">
+                        <optgroup label="Reasons For Contacting">
+                            <option value="reservation">Reservation</option>
+                            <option value="lost baggage">Lost Baggage</option>
+                            <option value="billing">Billing</option>
+                            <option value="other">Other</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group row">
+                    <label for="fname" class="col-sm-2 col-form-label display-2">First Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="fname" placeholder="John" required />
                     </div>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">First and Last Name</span>
-                        </div>
-                        <input type="text" class="form-control" id="fname" placeholder="John" />
-                        <input type="text" class="form-control" id="lname" placeholder="Smith" />
+                </div>
+                <div class="form-group row">
+                    <label for="lname" class="col-sm-2 col-form-label display-2">Last Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="lname" placeholder="Smith" required />
                     </div>
-                    <label for="phone">Phone Number</label>
-                    <input type="number" class="form-control" id="phone" placeholder="999-999-9999" />
-                    <br />
-                    <label for="Email">Email</label>
-                    <input type="email" class="form-control" id="email" />
+                </div>
+                <div class="form-group row">
+                    <label for="phone" class="col-sm-2 col-form-label display-2">Phone Number</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="phone" placeholder="999-999-9999" required />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Email" class="col-sm-2 col-form-label display-2">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="example@email.com" required />
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center pt-3">
                     <h4>Perferred method of contact</h4>
+                </div>
+                <div class="d-flex justify-content-center pt-3">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rad_phone" value="phone">
                         <label class="form-check-label" for="rad_phone">Phone</label>
@@ -48,14 +75,38 @@
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rad_email" value="Email">
                         <label class="form-check-label" for="rad_email">Email</label>
                     </div>
-                    <h4>Give more detail</h4>
-                    <textarea></textarea>
                 </div>
-                <button type="submit" class="btn btn-outline-success">Submit</button>
-                <button type="reset" class="btn btn-outline-danger">Clear</button>
+                <div class="d-flex justify-content-center pt-3">
+                    <h4>Give more detail</h4>
+                </div>
+                <div class="d-flex flex-column justify-content-center pt-3">
+                    <textarea class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="pt-3">
+                    <button type="submit" class="btn btn-outline-success" id="submit-btn">Submit</button>
+                    <button type="reset" class="btn btn-outline-danger" id="clear-btn">Clear</button>
+                </div>
             </form>
         </div>
     </main>
     <footer></footer>
 </body>
 </html>
+<script>
+    var contactReason;
+    var fname;
+    var lname;
+    var phone;
+    var email;
+
+    $(document).ready(function () {       
+
+        $("#contact-reason").change(function () {
+            contactReason = $("#contact-reason option:selected").text();
+        });
+
+        $("#submit-btn").click(function () {
+
+        });
+    });
+</script>
