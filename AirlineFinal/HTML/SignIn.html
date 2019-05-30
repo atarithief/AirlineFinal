@@ -2,15 +2,173 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/popper.min.js"></script>
+    <title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/SignInStyle.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+
+
 </head>
-<body>
+<body id="page-top">
     <div>
-        This is the Sign In page
+        <div id="nav-bar-container">
+            <div class="nav-bar-detail logo">
+                <a class="nav-link" id="home-link" href="Index.html"><div class="title" id="website-name">Awesome Airlines</div></a>
+            </div>
+            <div class="nav-bar-detail">
+                <a class="nav-link" href="Booking.html"><div class="title">Booking</div></a>
+                <a class="nav-link" href="Contact.html"><div class="title">Contact</div></a>
+                <a class="nav-link" href="Sign-In.html"><div class="title">Sign in</div></a>
+                <a class="nav-link" href="Sign-In.html"><div class="title" id="register-btn">Register</div></a>
+            </div>
+        </div>
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright ©&nbsp;Brand 2018</small></div>
+        </div>
+        <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="d-block js-scroll-trigger text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+        <div class="content">
+            <div class="container login-clean">
+                <form method="post" style="max-width: 375px;">
+                    <h2 class="sr-only">Login Form</h2>
+                    <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button><button class="btn btn-primary btn-block" type="reset">Clear</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                    <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cabin.png">
+                                    <p class="mb-5">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                        itaque. Nam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-2">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                    <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/cake.png">
+                                    <p class="mb-5">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                        itaque. Nam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-3">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                    <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/circus.png">
+                                    <p class="mb-5">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                        itaque. Nam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-4">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                    <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/game.png">
+                                    <p class="mb-5">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                        itaque. Nam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-5">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                    <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/safe.png">
+                                    <p class="mb-5">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                        itaque. Nam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-6">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                    <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/submarine.png">
+                                    <p class="mb-5">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                        itaque. Nam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

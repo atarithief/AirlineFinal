@@ -69,15 +69,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AddedStyles\RegistrationFormStyle.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\AddedStyles\SignInStyle.css" />
     <Content Include="HTML\Booking.html" />
     <Content Include="HTML\Contact.html" />
+    <Content Include="HTML\Header.html" />
     <Content Include="HTML\HomePage.html" />
+    <Content Include="HTML\Registration.html" />
     <Content Include="HTML\SignIn.html" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
