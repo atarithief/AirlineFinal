@@ -22,8 +22,17 @@
             background: linear-gradient(45deg, rgba(206, 245, 255, 0.60), rgba(255, 255, 206, 0.60));
         }
     </style>
+    <script>
+        $(function () {
+            $(".header").load("Header.html");
+        });
+        $(function () {
+            $(".footer").load("Footer.html");
+        });
+    </script>
 </head>
 <body id="page-top">
+    <div class="header"></div>
     <div>
         <div id="nav-bar-container">
             <div class="nav-bar-detail logo">
@@ -184,8 +193,7 @@
                 </div>
             </div>
         </main>
-
-
     </div>
+    <div class="footer"></div>
 </body>
 </html>
