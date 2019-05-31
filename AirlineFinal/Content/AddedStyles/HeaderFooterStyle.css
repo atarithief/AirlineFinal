@@ -1,0 +1,102 @@
+﻿    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    #nav-bar-container {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 500;
+        width: 100%;
+        min-height: 10vh;
+        background-color: #4CDBFF;
+        text-align: center;
+    }
+    .nav-bar-detail {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        float: right;
+        margin-right: 25px;
+    }
+    .logo {
+        float: left !important;
+        margin-left: 25px;
+        width: auto;
+    }
+    .nav-link {
+        text-align: center;
+        width: 100px;
+        overflow: hidden;
+        height: 10vh;
+        margin: 0 5px; 
+        text-align: center;  
+        line-height: 10vh;
+    }
+    .nav-link:hover {
+        background-color: #F7FFFC;
+    }
+    #home-link {
+        width: auto !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .title {
+        width: 100px;
+        margin: auto;   
+        overflow: visible;
+    }
+    .title:hover {
+        color: #4CDBFF !important;
+    }
+    #website-name {
+        width: 100%;
+    }
+    #register-btn {
+        color: #FFFF4C;
+    }
+    #footer-container {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: .9em;
+        background-color: #4CDBFF;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        min-height: 7vh;       
+        line-height: 7vh;
+    }
+    @media screen and (max-width: 715px) {
+        #nav-bar-container {
+            float: none !important;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+        .nav-bar-detail {
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+            margin: auto;              
+        }
+        .nav-link {
+            margin: auto;
+            width: 100%;
+            max-height: 5vh;
+            line-height: 5vh;
+        }
+        .nav-link:hover {
+            background-color: #F7FFFC;
+            color: #4CDBFF;
+        }
+        #home-link:hover {
+            background-color: none !important;
+        }
+        .title {
+            max-height: 5vh;
+        }
+    }
