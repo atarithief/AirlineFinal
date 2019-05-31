@@ -69,6 +69,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AddedStyles\HeaderFooterStyle.css" />
+    <Content Include="Content\AddedStyles\MainStyle.css" />
     <Content Include="Content\AddedStyles\RegistrationFormStyle.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -80,11 +82,13 @@
     <Content Include="HTML\Booked.html" />
     <Content Include="HTML\Booking.html" />
     <Content Include="HTML\Contact.html" />
+    <Content Include="HTML\Footer.html" />
     <Content Include="HTML\Header.html" />
     <Content Include="HTML\HomePage.html" />
     <Content Include="HTML\Purchased.html" />
     <Content Include="HTML\Registration.html" />
     <Content Include="HTML\SignIn.html" />
+    <Content Include="HTML\SuccessPage.html" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -120,6 +124,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="we are awesome.png" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
