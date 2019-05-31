@@ -87,7 +87,7 @@
                         <h4>Give more detail</h4>
                     </div>
                     <div class="d-flex flex-column justify-content-center pt-3">
-                        <textarea class="form-control" rows="3" required></textarea>
+                        <textarea id="description" class="form-control" rows="3" required></textarea>
                     </div>
                     <div class="pt-3">
                         <button type="submit" class="btn btn-outline-success" id="submit-btn">Submit</button>
@@ -106,6 +106,12 @@
         $("#contact-reason").change(function () {
             contactReason = $("#contact-reason option:selected").text();
         });
+
+        var firstName = document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var description = document.getElementById("description").value;
 
         $("#submit-btn").click(function () {
             $("$contact-form").submit();
