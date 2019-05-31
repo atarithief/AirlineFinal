@@ -67,10 +67,7 @@ CREATE TABLE Contact
 (
 	ContactID int identity(1,1) primary key,
 	ReasonForContacting int foreign key references ContactReason(ContactReasonID),
-<<<<<<< HEAD
-=======
 	FlightID int foreign key references FlightInfo(FlightID),
->>>>>>> Jensine
 	FirstName varchar(100) not null,
 	LastName varchar(150) not null,
 	PhoneNum varchar(12) not null, 
