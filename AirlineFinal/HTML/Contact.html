@@ -31,71 +31,73 @@
     </script>
 </head>
 <body>
-    <div class="header"></div>
-    <main class="d-flex justify-content-center" id="main-container">
-        <div class="container rounded border border-light p-4 m-4" id="form-container">
-            <form id="contact-form" target="_top" action="SuccessPage.html">
-                <div class="form-group">
-                    <select class="form-control custom-select" id="contact-reason">
-                        <optgroup label="Reasons For Contacting">
-                            <option value="reservation">Reservation</option>
-                            <option value="lost baggage">Lost Baggage</option>
-                            <option value="billing">Billing</option>
-                            <option value="other">Other</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <div class="form-group row">
-                    <label for="fname" class="col-sm-2 col-form-label display-2">First Name</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="fname" placeholder="John" required />
+    <div class="main-layout">
+        <div class="header"></div>
+        <main class="d-flex justify-content-center" id="main-container">
+            <div class="container rounded border border-light p-4 m-4" id="form-container">
+                <form id="contact-form" target="_top" action="SuccessPage.html">
+                    <div class="form-group">
+                        <select class="form-control custom-select" id="contact-reason">
+                            <optgroup label="Reasons For Contacting">
+                                <option value="reservation">Reservation</option>
+                                <option value="lost baggage">Lost Baggage</option>
+                                <option value="billing">Billing</option>
+                                <option value="other">Other</option>
+                            </optgroup>
+                        </select>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="lname" class="col-sm-2 col-form-label display-2">Last Name</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="lname" placeholder="Smith" required />
+                    <div class="form-group row">
+                        <label for="fname" class="col-sm-2 col-form-label display-2">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="fname" placeholder="John" required />
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="phone" class="col-sm-2 col-form-label display-2">Phone Number</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" id="phone" placeholder="999-999-9999" required />
+                    <div class="form-group row">
+                        <label for="lname" class="col-sm-2 col-form-label display-2">Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lname" placeholder="Smith" required />
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="Email" class="col-sm-2 col-form-label display-2">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="example@email.com" required />
+                    <div class="form-group row">
+                        <label for="phone" class="col-sm-2 col-form-label display-2">Phone Number</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="phone" placeholder="999-999-9999" required />
+                        </div>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center pt-3">
-                    <h4>Perferred method of contact</h4>
-                </div>
-                <div class="d-flex justify-content-center pt-3">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rad_phone" value="phone">
-                        <label class="form-check-label" for="rad_phone">Phone</label>
+                    <div class="form-group row">
+                        <label for="Email" class="col-sm-2 col-form-label display-2">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="example@email.com" required />
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rad_email" value="Email">
-                        <label class="form-check-label" for="rad_email">Email</label>
+                    <div class="d-flex justify-content-center pt-3">
+                        <h4>Perferred method of contact</h4>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center pt-3">
-                    <h4>Give more detail</h4>
-                </div>
-                <div class="d-flex flex-column justify-content-center pt-3">
-                    <textarea class="form-control" rows="3" required></textarea>
-                </div>
-                <div class="pt-3">
-                    <button type="submit" class="btn btn-outline-success" id="submit-btn">Submit</button>
-                    <button type="reset" class="btn btn-outline-danger" id="clear-btn">Clear</button>
-                </div>
-            </form>
-        </div>
-    </main>
-    <div class="footer"></div>
+                    <div class="d-flex justify-content-center pt-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rad_phone" value="phone">
+                            <label class="form-check-label" for="rad_phone">Phone</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rad_email" value="Email">
+                            <label class="form-check-label" for="rad_email">Email</label>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center pt-3">
+                        <h4>Give more detail</h4>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center pt-3">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="pt-3">
+                        <button type="submit" class="btn btn-outline-success" id="submit-btn">Submit</button>
+                        <button type="reset" class="btn btn-outline-danger" id="clear-btn">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <div class="footer"></div>
+    </div>
 </body>
 </html>
 <script>
