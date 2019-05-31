@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Booking</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         body {
             margin: auto;
@@ -40,48 +40,86 @@
             </div>
             <div class="row">
                 <div class="form-group col-md-6 left-xs left-sm left-md left-lg">
-                    <label>From</label>
-                    <input type="text" class="form-control" id="fromAir" placeholder="SeaTac" required />
+                    <label class="col-form-label-lg">From</label>
+                    <select id="fromAir" class="form-control">
+                        <option value="SeaTac">Seattle/Tacoma Intl</option>
+                        <option value="HSV">Huntsville Intl</option>
+                        <option value="BNA">Nashville Intl</option>
+                    </select>
+                    <!--<input type="text" class="form-control" id="fromAir" placeholder="SeaTac" required />-->
                 </div>
                 <div class="form-group col-md-6 right-xs right-sm right-md right-lg">
-                    <label>To</label>
-                    <input type="text" class="form-control" id="toAir" placeholder="SeaTac" required />
+                    <label class="col-form-label-lg">To</label>
+                    <select id="toAir" class="form-control">
+                        <option value="SeaTac">Seattle/Tacoma Intl</option>
+                        <option value="HSV">Huntsville Intl</option>
+                        <option value="BNA">Nashville Intl</option>
+                    </select>
+                    <!--<input type="text" class="form-control" id="toAir" placeholder="SeaTac" required />-->
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6 left-xs left-sm left-md left-lg">
-                    <label>Departure Date</label>
-                    <input type="date" class="form-control" id="departDate" required />
+                    <label class="col-form-label-lg">Departure Date</label>
+                    <input type="datetime-local" class="form-control" id="departDate" required />
                 </div>
                 <div class="form-group col-md-6 right-xs right-sm right-md right-lg" id="retDate">
-                    <label>Return Date</label>
-                    <input type="date" class="form-control" id="returnDate" required />
+                    <label class="col-form-label-lg">Return Date</label>
+                    <input type="datetime-local" class="form-control" id="returnDate" required />
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6 left-xs left-sm left-md left-lg">
-                    <label>Adults</label>
-                    <input type="number" class="form-control" id="adultCount" placeholder="1" min="0" max="7" required />
+                    <label class="col-form-label-lg">Adults</label>
+                    <input type="number" class="form-control" id="adultCount" value="1" min="0" max="7" required />
                 </div>
                 <div class="form-group col-md-6 left-xs left-sm left-md left-lg">
-                    <label>Children</label>
+                    <label class="col-form-label-lg">Children</label>
                     <input type="number" class="form-control" id="childCount" placeholder="0" min="0" max="7" required />
                 </div>
             </div>
             <div class="pt-3">
                 <button type="reset" class="btn btn-outline-danger" id="clear-btn">Clear</button>
-                <button type="submit" class="btn btn-outline-success" id="submit-btn">Find Flights</button>
+                <a class="btn btn-outline-success" id="submit-btn" href="Booked.html">Find Flights</a>
             </div>
         </div>
     </main>
     <div class="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
 <script>
     $('#rad_oneWay').change(function () {
         document.getElementById("retDate").style.visibility = "hidden";
     });
+
     $('#rad_roundTrip').change(function () {
         document.getElementById("retDate").style.visibility = "visible";
+    });
+
+    $("#submit-btn").click(function () {
+        var departAirport = document.getElementById("fromAir").value;
+        var departDate = document.getElementById("departDate").value;
+
+        var arriveAirport = document.getElementById("toAir").value;
+        var returnDate = document.getElementById("returnDate").value;
+
+        var adultCount = document.getElementById("adultCount").value;
+        var childCount = document.getElementById("childCount").value;
+
+        localStorage.setItem("From", departAirport);
+        localStorage.setItem("To", arriveAirport);
+        localStorage.setItem("Depart Date", departDate);
+        localStorage.setItem("Return Date", returnDate);
+        localStorage.setItem("Adults", adultCount);
+        localStorage.setItem("Children", childCount);
+    });
+
+    $("#clear-btn").click(function () {
+        location.reload();
     });
 </script>

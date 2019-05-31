@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Receipt</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            margin: auto;
+            text-align: center;
+        }
+
+        #main-container {
+            margin: auto;
+        }
+
+        #form-container {
+            background: linear-gradient(45deg, rgba(206, 245, 255, 0.60), rgba(255, 255, 206, 0.60));
+        }
+    </style>
+</head>
+<body>
+    <main class="d-flex justify-content-center" id="main-container">
+        <div class="container rounded border border-light p-4 m-4" id="form-container">
+            <label class="col-form-label-lg">Flight Number: </label>
+            <label id="flightNumber"></label>
+            <div class="row">
+                <div class="form-group col-md-6 left-xs left-sm left-md left-lg">
+                    <label class="col-form-label-lg">From: </label>
+                    <label id="fromAirport"></label>
+                </div>
+                <div class="form-group col-md-6 right-xs right-sm right-md right-lg">
+                    <label class="col-form-label-lg">To: </label>
+                    <label id="toAirport"></label>
+                </div>
+            </div>
+            <label class="col-form-label-lg">Purchased For: </label>
+            <label id="price"></label>
+            <div class="pt-3">
+                <a class="btn btn-outline-success" id="submit-btn" href="Booking.html">Book Another Flight</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+
+        var fromAir = localStorage.getItem("From");
+        var toAir = localStorage.getItem("To");
+        var buyPrice = localStorage.getItem("BuyPrice");
+        var flightNum = localStorage.getItem("FlightNum")
+
+        const fromTxt = document.getElementById("fromAirport");
+        const toTxt = document.getElementById("toAirport");
+        const flightNumTxt = document.getElementById("flightNumber");
+        const priceTxt = document.getElementById("price");
+
+        fromTxt.innerHTML = fromAir;
+        toTxt.innerHTML = toAir;
+        flightNumTxt.innerHTML = flightNum;
+        priceTxt.innerHTML = buyPrice;
+    }); 
+</script>
